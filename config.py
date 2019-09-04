@@ -19,7 +19,7 @@ class Config:
 
 
 class ProdConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://hudson:12345@localhost/watchlist'
+    SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
     pass
 
 
